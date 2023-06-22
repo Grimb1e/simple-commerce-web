@@ -101,7 +101,6 @@ body {
   border: none;
   background-color: #007bff;
   color: #fff;
-  transition: background-color 0.3s ease;
   font-size: 16px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -114,23 +113,13 @@ body {
   border: none;
   background-color: #007bff;
   color: #fff;
-  transition: background-color 0.3s ease;
   font-size: 14px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-.card button:hover {
-  background-color: #0056b3;
-}
-
-.search button:hover {
-  background-color: #0056b3;
 }
 
 @media (max-width: 768px) {
   .card {
     width: 100%;
+    height: auto;
   }
 
   .container {
