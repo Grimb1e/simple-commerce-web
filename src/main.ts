@@ -93,7 +93,7 @@ const handleSearch = () => {
   filterProducts(input);
 };
 
-searchProduct.addEventListener("input", debounce(e => {
+searchProduct.addEventListener("input", debounce(() => {
   handleSearch();
 }, 1000));
 
