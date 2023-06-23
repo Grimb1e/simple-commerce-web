@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Root2 } from "./response.type";
+import debounce from 'lodash/debounce';
 
 let status = "less";
 let allProducts: Root2[] = [];
@@ -92,12 +93,9 @@ const handleSearch = () => {
   filterProducts(input);
 };
 
-searchProduct.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    handleSearch();
-  }
-});
+searchProduct.addEventListener("input", debounce(e => {
+  handleSearch();
+}, 1000));
 
 btnSearch.addEventListener("click", handleSearch);
 
