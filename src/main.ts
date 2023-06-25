@@ -8,7 +8,6 @@ let filteredProducts: Root2[] = [];
 
 const searchProduct = document.querySelector("input") as HTMLInputElement;
 const cardContainer = document.querySelector(".container") as HTMLDivElement;
-const btnSearch = document.querySelector("button") as HTMLButtonElement;
 
 const fetchData = async () => {
   try {
@@ -96,7 +95,5 @@ const handleSearch = () => {
 searchProduct.addEventListener("input", debounce(() => {
   handleSearch();
 }, 1000));
-
-btnSearch.addEventListener("click", handleSearch);
 
 fetchData();
